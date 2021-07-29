@@ -1,0 +1,114 @@
+// import other scss file
+@import "../sass/containerStyle/containerStyle";
+
+//-----------------------------------------
+/* ## With Sass, you can store information in variables, like:
+strings
+numbers
+colors
+booleans
+lists
+nulls
+
+*/
+
+$myFont: Helvetica, sans-serif;
+$myColor: rgb(51, 1, 61);
+$myFontSize: 18px;
+$myWidth: 680px;
+$containerColor: green;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+  color: $containerColor;
+}
+
+// -------------------------------------------
+
+// Sass Nested Rules
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+#nSass {
+  font: {
+    family: Helvetica, sans-serif;
+    size: 18px;
+    weight: bold;
+  }
+}
+
+//-------------------------------
+// ## Sass Mixins
+// The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+// The @include directive is created to let you use (include) the mixin.
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.danger {
+  @include important-text;
+  background-color: yellow;
+}
+
+/*
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
+*/
+
+/* Define mixin with two arguments */
+@mixin bordered($color, $width: 1px) {
+  border: $width solid $color;
+}
+
+.blockquoteArticle {
+  @include bordered(blue, 4px); // Call mixin with two values
+}
+
+// Sass @extend Directive
+// The @extend directive lets you share a set of CSS properties from one selector to another.
+// The @extend directive is useful if you have almost identically styled elements that only differ in some small details.
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-yes {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+
+.button-no {
+  @extend .button-basic;
+  background-color: red;
+}

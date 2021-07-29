@@ -1,0 +1,85 @@
+.container {
+  width: 98%;
+  border: 2px solid #f00;
+  padding: 10px;
+}
+
+/* ## With Sass, you can store information in variables, like:
+strings
+numbers
+colors
+booleans
+lists
+nulls
+
+*/
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: #33013d;
+}
+
+#container {
+  width: 680px;
+  color: green;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+#nSass {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+/*
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
+*/
+/* Define mixin with two arguments */
+.blockquoteArticle {
+  border: 4px solid blue;
+}
+
+.button-basic, .button-yes, .button-no {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-yes {
+  background-color: green;
+  color: white;
+}
+
+.button-no {
+  background-color: red;
+}
+/*# sourceMappingURL=myStyle.css.map */
