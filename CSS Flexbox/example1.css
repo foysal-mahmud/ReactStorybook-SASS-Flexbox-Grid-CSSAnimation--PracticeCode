@@ -1,0 +1,89 @@
+/* CSS flexbox */
+
+.container {
+  display: flex;
+  /* flex-direction: row(default), row-reverse, column, column-reverse */
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap(default), wrap, wrap-reverse; */
+  /* flex-wrap: wrap; */
+  /* flex-direction + flex-wrap = flex-flow: row wrap; */
+  flex-flow: row wrap;
+
+  /* 
+  # justify-content moves the whole container #
+  justify-content: flex-start(default), flex-end, center, space-around, space-between, space-evenly 
+  space-around = space all direction of each element. Not equal space for all items. but item two sides space are equal.
+  space-between = divide remaining space equally between them. not start or end sides.
+  space-evenly = equal space for all items.
+  */
+  justify-content: space-around;
+
+  /* align-items: stretch(default), flex-start, flex-end, flex-center;  [1 items = 1 row]*/
+  align-items: stretch;
+
+  /* justify-content + align-items = align-content: center; [ flex-start, flex-end, center, space-around, space-between, space-evenly */
+  /* align-content: flex-end; */
+
+  /* items ORDER properties = order: 2; 0(default)*/
+
+  /* flex-grow: 1; 0(default) */
+  flex-grow: 1;
+
+  /* flex-shrink: 0; 1(default - for responsive) */
+
+  flex-basis: 100px;
+  /* same as min-width, but less than min-width, it will be overflow. So for responsive, always use flex-basis */
+  /* flex-basis: 60%; */
+
+  /* flex = flex-grow + flex-shrink + flex-basis   */
+  /* flex: 1 1 100px; */
+}
+
+/* basic css property */
+.item {
+  color: #fff;
+  background-color: #cccccc;
+  padding: 20px;
+  /* min-width: 100px; */
+  flex-basis: 200px;
+  font-family: "Montserrat";
+  font-size: calc(1vw + 1em);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.one {
+  background-color: violet;
+  /* width: 100px;
+  height: 150px; */
+}
+
+.two {
+  background-color: yellowgreen;
+  /* width: 100px;
+  height: 80px;
+  order: 2; */
+}
+
+.three {
+  background-color: royalblue;
+  /* width: 100px;
+  height: 250px; */
+}
+
+.four {
+  background-color: rebeccapurple;
+  /* width: 100px;
+  height: 180px;
+  order: 1; */
+}
+.five {
+  background-color: aqua;
+  /* width: 250px;
+  height: 150px; */
+}
+.six {
+  background-color: brown;
+  /* width: 100px;
+  height: 150px; */
+}
